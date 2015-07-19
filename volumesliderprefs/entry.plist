@@ -1,0 +1,10 @@
+{
+    entry = {
+	bundle = VolumeSliderPrefs;
+	cell = PSLinkCell;
+	detail = VolumeSliderPrefsListController;
+	icon = VolumeSliderPrefs.png;
+	isController = 1;
+	label = VolumeSlider;
+    };
+}

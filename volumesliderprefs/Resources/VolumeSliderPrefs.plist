@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+		<dict>
+	    	<key>cell</key>				<string>PSGroupCell</string>
+	    	<key>footerCellClass</key>	<string>VolumeSliderCustomCell</string>
+		</dict>
+
+        <dict>
+            <key>cell</key>             <string>PSGroupCell</string>
+        </dict>
+
+        <dict>
+            <key>cell</key>             <string>PSSwitchCell</string>
+            <key>default</key>          <true/>
+            <key>defaults</key>         <string>com.TweaksByLogan.VolumeSlider</string>
+            <key>key</key>              <string>enabled</string>
+            <key>label</key>            <string>Enabled</string>
+            <key>PostNotification</key> <string>com.TweaksByLogan.VolumeSlider</string>
+        </dict>
+
+		<dict>
+	    	<key>cell</key>				<string>PSGroupCell</string>
+	    	<key>label</key>			<string>Settings</string>
+			<key>footerText</key>		<string>Choose a main color for the view.</string>
+			<key>footerAlignment</key>	<integer>1</integer>
+		</dict>
+
+		<dict>
+			<key>cell</key>				<string>PSSegmentCell</string>
+			<key>defaults</key>			<string>com.TweaksByLogan.VolumeSlider</string>
+			<key>key</key>				<string>mainColor</string>
+			<key>default</key>			<string>white</string>
+			<key>validTitles</key>		<array>
+											<string>White</string>
+											<string>Black</string>
+										</array>
+			<key>validValues</key>
+										<array>
+											<string>white</string>
+											<string>black</string>
+										</array>
+			<key>PostNotification</key>	<string>com.TweaksByLogan.VolumeSlider/saved</string>
+		</dict>
+
+		<dict>
+	    	<key>cell</key>				<string>PSGroupCell</string>
+			<key>footerText</key>		<string>Choose a blur type for the background.</string>
+			<key>footerAlignment</key>	<integer>1</integer>
+		</dict>
+
+		<dict>
+			<key>cell</key>				<string>PSSegmentCell</string>
+			<key>defaults</key>			<string>com.TweaksByLogan.VolumeSlider</string>
+			<key>key</key>				<string>blurType</string>
+			<key>default</key>			<string>dark</string>
+			<key>validTitles</key>		<array>
+											<string>Extra Light</string>
+											<string>Light</string>
+											<string>Dark</string>
+										</array>
+			<key>validValues</key>
+										<array>
+											<string>extralight</string>
+											<string>light</string>
+											<string>dark</string>
+										</array>
+			<key>PostNotification</key>	<string>com.TweaksByLogan.VolumeSlider/saved</string>
+		</dict>
+
+		<dict>
+	    	<key>cell</key>				<string>PSGroupCell</string>
+	    	<key>footerText</key>		<string>Change delay duration before the view hides.</string>
+			<key>footerAlignment</key>	<integer>1</integer>
+		</dict>
+
+		<dict>
+			<key>cell</key>				<string>PSSliderCell</string>
+			<key>default</key>          <real>1.25</real>
+			<key>defaults</key>			<string>com.TweaksByLogan.VolumeSlider</string>
+			<key>key</key>				<string>delayDuration</string>
+			<key>max</key>				<integer>5</integer>
+			<key>min</key>				<integer>0</integer>
+			<key>showValue</key>		<true/>
+			<key>PostNotification</key>	<string>com.TweaksByLogan.VolumeSlider/saved</string>
+		</dict>
+
+		<dict>
+	    	<key>cell</key>				<string>PSGroupCell</string>
+	    	<key>footerText</key>		<string>Change the animation duration of the view.</string>
+			<key>footerAlignment</key>	<integer>1</integer>
+		</dict>
+
+        <dict>
+			<key>cell</key>				<string>PSSliderCell</string>
+			<key>default</key>          <real>0.25</real>
+			<key>defaults</key>			<string>com.TweaksByLogan.VolumeSlider</string>
+			<key>key</key>				<string>animationDuration</string>
+			<key>max</key>				<integer>1</integer>
+			<key>min</key>				<integer>0</integer>
+			<key>showValue</key>		<true/>
+			<key>PostNotification</key>	<string>com.TweaksByLogan.VolumeSlider/saved</string>
+		</dict>
+
+		<dict>
+	    	<key>cell</key>				<string>PSGroupCell</string>
+	    	<key>footerText</key>		<string>Change the corner radius of the view.</string>
+			<key>footerAlignment</key>	<integer>1</integer>
+		</dict>
+
+        <dict>
+			<key>cell</key>				<string>PSSliderCell</string>
+			<key>default</key>          <real>0</real>
+			<key>defaults</key>			<string>com.TweaksByLogan.VolumeSlider</string>
+			<key>key</key>				<string>cornerRadius</string>
+			<key>max</key>				<integer>50</integer>
+			<key>min</key>				<integer>0</integer>
+			<key>showValue</key>		<true/>
+			<key>PostNotification</key>	<string>com.TweaksByLogan.VolumeSlider/saved</string>
+		</dict>
+
+		<dict>
+	    	<key>cell</key>				<string>PSGroupCell</string>
+		</dict>
+
+		<dict>
+	    	<key>action</key>			<string>respring</string>
+            <key>cell</key>             <string>PSButtonCell</string>
+	    	<key>defaults</key>         <string>com.TweaksByLogan.VolumeSlider</string>
+	    	<key>label</key>            <string>Respring</string>
+        </dict>
+
+		<dict>
+	    	<key>action</key>			<string>followLogan</string>
+            <key>cell</key>             <string>PSButtonCell</string>
+	    	<key>defaults</key>         <string>com.TweaksByLogan.VolumeSlider</string>
+	    	<key>label</key>            <string>Follow @logandev22 on Twitter</string>
+        </dict>
+
+		<dict>
+        	<key>cell</key>				<string>PSGroupCell</string>
+			<key>footerText</key>		<string>© 2015 Logan O'Connell</string>
+			<key>footerAlignment</key>	<integer>1</integer>
+		</dict>
+	</array>
+	<key>title</key>		<string></string>
+</dict>
+</plist>
