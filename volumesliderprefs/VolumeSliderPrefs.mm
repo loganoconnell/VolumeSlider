@@ -6,21 +6,20 @@
 @end
 
 @interface PSListController : PSViewController {
-
 	id _specifiers;
 }
--(id)specifiers;
--(id)loadSpecifiersFromPlistName:(id)name target:(id)target;
+- (id)specifiers;
+- (id)loadSpecifiersFromPlistName:(id)name target:(id)target;
 @end
 
 @protocol PreferencesTableCustomView
--(id)initWithSpecifier:(id)arg1;
+- (id)initWithSpecifier:(id)arg1;
 @optional
--(CGFloat)preferredHeightForWidth:(CGFloat)arg1;
+- (CGFloat)preferredHeightForWidth:(CGFloat)arg1;
 @end
 
 @interface PSTableCell : UITableView
--(id)initWithStyle:(int)style reuseIdentifier:(id)arg2;
+- (id)initWithStyle:(int)style reuseIdentifier:(id)arg2;
 @end
 
 @interface VolumeSliderPrefsListController: PSListController

@@ -43,7 +43,6 @@ static float animationDuration;
 static float cornerRadius;
 
 static void loadPrefs() {
-
 	NSMutableDictionary *prefs = [[NSMutableDictionary alloc] initWithContentsOfFile:@"/var/mobile/Library/Preferences/com.TweaksByLogan.VolumeSlider.plist"];
 
 	enabled = [prefs objectForKey:@"enabled"] ? [[prefs objectForKey:@"enabled"] boolValue] : YES;
@@ -234,6 +233,10 @@ static void loadPrefs() {
 			}];
 		}
 	}
+
+	else {
+		%orig;
+	}
 }
 
 %new
@@ -263,7 +266,6 @@ static void loadPrefs() {
 %end
 
 %ctor {
-
 	loadPrefs();
 	CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), NULL, (CFNotificationCallback)loadPrefs, CFSTR("com.TweaksByLogan.VolumeSlider/saved"), NULL, CFNotificationSuspensionBehaviorCoalesce);
 }
