@@ -33,11 +33,11 @@ NSBundle *templateBundle2 = [NSBundle bundleWithPath:@"/Library/PreferenceBundle
 
 static CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
 static CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
-static CGFloat screenHeightScale = screenHeight / 9;
 
 static BOOL enabled;
 static NSString *mainColor;
 static NSString *blurType;
+static float screenHeightScale;
 static float delayDuration;
 static float animationDuration;
 static float cornerRadius;
@@ -48,6 +48,7 @@ static void loadPrefs() {
 	enabled = [prefs objectForKey:@"enabled"] ? [[prefs objectForKey:@"enabled"] boolValue] : YES;
 	mainColor = [prefs objectForKey:@"mainColor"] ? [prefs objectForKey:@"mainColor"] : @"white";
 	blurType = [prefs objectForKey:@"blurType"] ? [prefs objectForKey:@"blurType"] : @"dark";
+	screenHeightScale = [prefs objectForKey:@"screenHeightScale"] ? [[prefs objectForKey:@"screenHeightScale"] floatValue] : 65.0;
 	delayDuration = [prefs objectForKey:@"delayDuration"] ? [[prefs objectForKey:@"delayDuration"] floatValue] : 1.25;
 	animationDuration = [prefs objectForKey:@"animationDuration"] ? [[prefs objectForKey:@"animationDuration"] floatValue] : 0.25;
 	cornerRadius = [prefs objectForKey:@"cornerRadius"] ? [[prefs objectForKey:@"cornerRadius"] floatValue] : 0.0;

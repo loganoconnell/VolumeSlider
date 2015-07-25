@@ -73,7 +73,24 @@
 
 		<dict>
 	    	<key>cell</key>				<string>PSGroupCell</string>
-	    	<key>footerText</key>		<string>Change delay duration before the view hides.</string>
+	    	<key>footerText</key>		<string>Change the height of the view.</string>
+			<key>footerAlignment</key>	<integer>1</integer>
+		</dict>
+
+		<dict>
+			<key>cell</key>				<string>PSSliderCell</string>
+			<key>default</key>          <real>65.0</real>
+			<key>defaults</key>			<string>com.TweaksByLogan.VolumeSlider</string>
+			<key>key</key>				<string>screenHeightScale</string>
+			<key>max</key>				<integer>100</integer>
+			<key>min</key>				<integer>30</integer>
+			<key>showValue</key>		<true/>
+			<key>PostNotification</key>	<string>com.TweaksByLogan.VolumeSlider/saved</string>
+		</dict>
+
+		<dict>
+	    	<key>cell</key>				<string>PSGroupCell</string>
+	    	<key>footerText</key>		<string>Change the delay duration before the view hides.</string>
 			<key>footerAlignment</key>	<integer>1</integer>
 		</dict>
 
