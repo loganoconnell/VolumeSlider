@@ -3,7 +3,7 @@ THEOS_BUILD_DIR = Packages
 include theos/makefiles/common.mk
 
 TWEAK_NAME = VolumeSlider
-VolumeSlider_FILES = Tweak.xm
+VolumeSlider_FILES = VolumeSlider.xm
 VolumeSlider_LIBRARIES = substrate flipswitch
 VolumeSlider_FRAMEWORKS = Foundation UIKit CoreGraphics
 
