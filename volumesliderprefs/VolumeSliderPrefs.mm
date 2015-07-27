@@ -1,7 +1,3 @@
-@interface TWTweetComposeViewController : UIViewController
-- (void)setInitialText:(NSString *)string;
-@end
-
 @interface PSViewController : UIViewController
 @end
 
@@ -10,6 +6,10 @@
 }
 - (id)specifiers;
 - (id)loadSpecifiersFromPlistName:(id)name target:(id)target;
+@end
+
+@interface TWTweetComposeViewController : UIViewController
+- (void)setInitialText:(NSString *)string;
 @end
 
 @protocol PreferencesTableCustomView
@@ -67,20 +67,25 @@
 
 - (void)followLogan {
 	NSString *user = @"logandev22";
-	if([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"tweetbot:"]])
+	if([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"tweetbot:"]]) {
 		[[UIApplication sharedApplication] openURL:[NSURL URLWithString:[@"tweetbot:///user_profile/" stringByAppendingString:user]]];
+	}
 	
-	else if([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"twitterrific:"]])
+	else if([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"twitterrific:"]]) {
 		[[UIApplication sharedApplication] openURL:[NSURL URLWithString:[@"twitterrific:///profile?screen_name=" stringByAppendingString:user]]];
+	}
 	
-	else if([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"tweetings:"]])
+	else if([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"tweetings:"]]) {
 		[[UIApplication sharedApplication] openURL:[NSURL URLWithString:[@"tweetings:///user?screen_name=" stringByAppendingString:user]]];
+	}
 	
-	else if([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"twitter:"]])
+	else if([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"twitter:"]]) {
 		[[UIApplication sharedApplication] openURL:[NSURL URLWithString:[@"twitter://user?screen_name=" stringByAppendingString:user]]];
+	}
 	
-	else
+	else {
 		[[UIApplication sharedApplication] openURL:[NSURL URLWithString:[@"https://mobile.twitter.com/" stringByAppendingString:user]]];
+	}
 }
 
 - (void)share:(UIBarButtonItem *)sender {
@@ -140,7 +145,6 @@
 }
  
 - (CGFloat)preferredHeightForWidth:(CGFloat)arg1 {
-
 	CGFloat prefHeight = 90.0;
 	return prefHeight;
 }

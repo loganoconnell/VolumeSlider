@@ -1,7 +1,7 @@
 #import <Flipswitch/Flipswitch.h>
 
 @interface UIApplication (VolumeSlider)
-- (int)_frontMostAppOrientation;
+- (UIInterfaceOrientation)_frontMostAppOrientation;
 @end
 
 @interface UIImage (VolumeSlider)
